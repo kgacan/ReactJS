@@ -1,16 +1,9 @@
 import React from "react";
+import classes from "./Char.module.css";
 
 const char = props => {
-  const style = {
-    display: "inline-block",
-    padding: "16px",
-    textAlign: "center",
-    margin: "16px",
-    border: "1px solid black"
-  };
-
   return (
-    <div style={style} onClick={props.clicked}>
+    <div className={classes.compFrame} onClick={props.clicked}>
       {props.letter}
     </div>
   );
