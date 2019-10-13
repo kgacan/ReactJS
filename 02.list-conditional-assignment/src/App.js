@@ -79,12 +79,21 @@ class App extends Component {
         </ol>
         <p>Hint: Keep in mind that JavaScript strings are basically arrays!</p>
         <hr />
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-6 m-auto">
+              <div className="form-group">
+                <input
+                  className="form-control"
+                  type="text"
+                  onChange={this.onChangeHandler}
+                  value={this.state.inputText}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <input
-          type="text"
-          onChange={this.onChangeHandler}
-          value={this.state.inputText}
-        />
         <p>{this.state.numberOfCharacters}</p>
         <Validation len={this.state.numberOfCharacters} />
         {charsFromInput}
